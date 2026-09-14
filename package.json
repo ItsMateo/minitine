@@ -2,7 +2,18 @@
 	"name": "minitine",
 	"version": "0.1.0",
 	"description": "Minimal, reusable layout primitives and patterns for Mantine apps.",
+	"license": "MIT",
+	"author": "ItsMateo",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ItsMateo/minitine.git"
+	},
+	"homepage": "https://github.com/ItsMateo/minitine#readme",
+	"bugs": {
+		"url": "https://github.com/ItsMateo/minitine/issues"
+	},
 	"type": "module",
+	"types": "./dist/src/index.d.ts",
 	"sideEffects": [
 		"*.css",
 		"*.scss"
@@ -23,7 +34,8 @@
 		"storybook:build": "storybook build",
 		"lint": "biome check .",
 		"format": "biome check . --write",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "vite build"
 	},
 	"dependencies": {
 		"lucide-react": "^0.577.0"
