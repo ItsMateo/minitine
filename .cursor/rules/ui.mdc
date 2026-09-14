@@ -1,0 +1,46 @@
+---
+description: Minitine UI rules — theme, Mantine components and styles
+globs: src/**/*.{tsx,scss}
+alwaysApply: false
+---
+
+# Minitine UI rules
+
+[AGENTS.md](../../AGENTS.md) has the full rules. This file has the most important rules only.
+
+## Keep the library general
+
+Minitine is a general library. Do not put a product name, a brand or a business rule in it. Do not
+put a product word in the name of a component or in the name of a prop. Put components for one
+product in the application for that product.
+
+## Use the first item that gives the result
+
+1. A Minitine component. Examples: `AppShell`, `InspectorPanel`, `EmptyState`.
+2. A Mantine component with props. Examples: `p`, `gap`, `c`, `fw`, `size`, `variant`, `radius`.
+3. A Minitine token. Examples: `var(--minitine-color-border)`, `tokens.color.border`.
+4. A CSS module. Use a CSS module only if props cannot give you the layout.
+
+```tsx
+// ❌ INCORRECT — a CSS module for the style of a sidebar item
+<UnstyledButton className={styles.item} data-active={active}>…</UnstyledButton>
+
+// ✅ CORRECT — the NavLink variant from the theme
+<NavLink label="Board" leftSection={<Icon icon={KanbanSquare} />} active />
+```
+
+## More rules
+
+- Do not write a color value, and do not write a `px` value in a stylesheet. Use the tokens and the
+  space scale.
+- Do not set a prop that the theme sets. Examples: `variant`, `radius`, `withBorder` on Card and
+  Paper.
+- Correct the appearance in `src/theme/mantine.ts` or in `src/assets/styles/variants.scss`. Do not
+  correct it in one component.
+- Use the Mantine status colors: `red`, `yellow`, `green` and `blue`.
+- Give `ReactNode` props to a component. Do not write the content in the component.
+- Look at each change in the light scheme and in the dark scheme.
+
+---
+
+This document uses ASD-STE100 Simplified Technical English.

@@ -1,0 +1,45 @@
+
+.timeline {
+	--timeline-axis: 12px;
+	--timeline-rail: 28px;
+	--timeline-bullet-size: 18px;
+	--timeline-bullet-top: 12px;
+	--timeline-item-gap: 8px;
+	position: relative;
+	padding-left: var(--timeline-rail);
+}
+
+.timelineItem {
+	position: relative;
+
+	&:not(:last-child)::after {
+		content: "";
+		position: absolute;
+		left: calc(var(--timeline-axis) - var(--timeline-rail));
+		top: calc(var(--timeline-bullet-top) + var(--timeline-bullet-size));
+		height: calc(100% - var(--timeline-bullet-size) + var(--timeline-item-gap));
+		width: 1px;
+		transform: translateX(-50%);
+		background: var(--minitine-color-border-strong);
+		z-index: 0;
+		pointer-events: none;
+	}
+}
+
+.timelineBullet {
+	position: absolute;
+	left: calc(var(--timeline-axis) - var(--timeline-rail));
+	top: var(--timeline-bullet-top);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--timeline-bullet-size);
+	height: var(--timeline-bullet-size);
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.bulletSvg {
+	display: block;
+	flex-shrink: 0;
+}

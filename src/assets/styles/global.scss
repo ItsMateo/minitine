@@ -1,0 +1,112 @@
+:root {
+	--minitine-radius-sm: 6px;
+	--minitine-radius-md: 8px;
+	--minitine-motion-fast: 120ms ease;
+	--minitine-motion-normal: 180ms ease;
+	--minitine-sidebar-width: 190px;
+	--minitine-inspector-width: 420px;
+	--minitine-titlebar-height: 32px;
+	--minitine-page-header-height: 64px;
+	/* This value keeps the page title and the sidebar brand on the same line. */
+	--minitine-content-top-pad: 14px;
+	--mantine-cursor-type: pointer;
+}
+
+[data-mantine-color-scheme="dark"] {
+	--mantine-color-body: #0a0a0a;
+	--mantine-color-default: #171717;
+	--mantine-color-default-border: #262626;
+	--mantine-color-default-hover: #1f1f1f;
+	--mantine-color-bright: #fafafa;
+	--mantine-color-text: #fafafa;
+	--mantine-color-dimmed: #a1a1aa;
+	--mantine-color-placeholder: #71717a;
+
+	--minitine-color-background: #0a0a0a;
+	--minitine-color-surface: #111111;
+	--minitine-color-surface-raised: #171717;
+	--minitine-color-border: #262626;
+	--minitine-color-border-strong: #3f3f46;
+	--minitine-color-text: #fafafa;
+	--minitine-color-text-muted: #a1a1aa;
+	--minitine-color-text-subtle: #71717a;
+	--minitine-color-accent: #fafafa;
+	--minitine-color-accent-foreground: #0a0a0a;
+	--minitine-color-focus: #fafafa;
+	--minitine-color-input-background: #111111;
+	--minitine-color-card-background: #171717;
+	--minitine-color-card-hover: #1f1f1f;
+	--minitine-color-sidebar-active: #1f1f1f;
+
+	/* Mantine calculates these colors from the neutral colors. Set them to the
+	   surface tokens. Then the light, outline and default variants are different. */
+	--mantine-color-neutral-light: var(--minitine-color-card-hover);
+	--mantine-color-neutral-light-hover: var(--minitine-color-border);
+	--mantine-color-neutral-light-color: var(--minitine-color-text);
+	--mantine-color-neutral-outline: var(--minitine-color-border-strong);
+	--mantine-color-neutral-outline-hover: var(--minitine-color-card-hover);
+}
+
+[data-mantine-color-scheme="light"] {
+	--mantine-color-body: #ffffff;
+	--mantine-color-default: #fafafa;
+	--mantine-color-default-border: #e4e4e7;
+	--mantine-color-default-hover: #f4f4f5;
+	--mantine-color-bright: #18181b;
+	--mantine-color-text: #18181b;
+	--mantine-color-dimmed: #52525b;
+	--mantine-color-placeholder: #71717a;
+
+	--minitine-color-background: #ffffff;
+	--minitine-color-surface: #fafafa;
+	--minitine-color-surface-raised: #f4f4f5;
+	--minitine-color-border: #e4e4e7;
+	--minitine-color-border-strong: #d4d4d8;
+	--minitine-color-text: #18181b;
+	--minitine-color-text-muted: #52525b;
+	--minitine-color-text-subtle: #71717a;
+	--minitine-color-accent: #18181b;
+	--minitine-color-accent-foreground: #fafafa;
+	--minitine-color-focus: #18181b;
+	--minitine-color-input-background: #fafafa;
+	--minitine-color-card-background: #ffffff;
+	--minitine-color-card-hover: #f4f4f5;
+	--minitine-color-sidebar-active: #f4f4f5;
+
+	--mantine-color-neutral-light: var(--minitine-color-card-hover);
+	--mantine-color-neutral-light-hover: var(--minitine-color-border);
+	--mantine-color-neutral-light-color: var(--minitine-color-text);
+	--mantine-color-neutral-outline: var(--minitine-color-border-strong);
+	--mantine-color-neutral-outline-hover: var(--minitine-color-card-hover);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--minitine-color-background);
+	color: var(--minitine-color-text);
+	font-family: var(--mantine-font-family);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+	outline: 1px solid var(--minitine-color-focus);
+	outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

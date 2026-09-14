@@ -1,0 +1,14 @@
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 240px;
+	padding: var(--mantine-spacing-xl);
+	border: 1px dashed var(--minitine-color-border);
+	border-radius: var(--minitine-radius-sm);
+	background: var(--minitine-color-surface);
+}
+
+.icon {
+	color: var(--minitine-color-text-subtle);
+}

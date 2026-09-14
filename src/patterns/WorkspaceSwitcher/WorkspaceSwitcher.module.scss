@@ -1,0 +1,17 @@
+.trigger {
+	display: block;
+	width: 100%;
+	padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
+	border-radius: var(--minitine-radius-sm);
+	color: var(--minitine-color-text);
+	text-align: left;
+
+	&:hover {
+		background: var(--minitine-color-card-hover);
+	}
+
+	&:focus-visible {
+		outline: 1px solid var(--minitine-color-focus);
+		outline-offset: 1px;
+	}
+}

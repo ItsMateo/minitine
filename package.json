@@ -1,0 +1,56 @@
+{
+	"name": "minitine",
+	"version": "0.1.0",
+	"description": "Minimal, reusable layout primitives and patterns for Mantine apps.",
+	"type": "module",
+	"sideEffects": [
+		"*.css",
+		"*.scss"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/src/index.d.ts",
+			"import": "./dist/minitine.js"
+		},
+		"./styles.css": "./dist/assets/minitine.css"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "vite build",
+		"storybook:dev": "storybook dev -p 6006 --ci",
+		"storybook:build": "storybook build",
+		"lint": "biome check .",
+		"format": "biome check . --write",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"lucide-react": "^0.577.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.7",
+		"@mantine/core": "^9.5.1",
+		"@mantine/hooks": "^9.5.1",
+		"@storybook/addon-a11y": "^10.1.11",
+		"@storybook/addon-docs": "^10.1.11",
+		"@storybook/react-vite": "^10.1.11",
+		"@types/node": "^22",
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.4",
+		"@vitejs/plugin-react": "^6.0.5",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"sass-embedded": "^1.92.1",
+		"storybook": "^10.1.11",
+		"typescript": "^6.0.3",
+		"vite": "^8.2.1",
+		"vite-plugin-dts": "^4.5.4"
+	},
+	"peerDependencies": {
+		"@mantine/core": "^9.5.1",
+		"@mantine/hooks": "^9.5.1",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8"
+	}
+}

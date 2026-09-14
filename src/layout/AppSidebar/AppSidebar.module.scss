@@ -1,0 +1,6 @@
+.brand {
+	display: flex;
+	align-items: center;
+	min-height: calc(var(--minitine-content-top-pad) * 2 + 18px);
+	padding: var(--minitine-content-top-pad) var(--mantine-spacing-sm) var(--mantine-spacing-md);
+}

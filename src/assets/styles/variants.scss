@@ -1,0 +1,398 @@
+.mantine-Button-root[data-variant="minitine"] {
+	background: var(--minitine-color-accent);
+	color: var(--minitine-color-accent-foreground);
+	border: 1px solid var(--minitine-color-accent);
+	font-weight: 500;
+	transition:
+		background var(--minitine-motion-fast),
+		border-color var(--minitine-motion-fast),
+		color var(--minitine-motion-fast);
+
+	.mantine-Button-section svg {
+		stroke: currentColor;
+		color: currentColor;
+	}
+
+	&:hover:not(:disabled) {
+		background: color-mix(in srgb, var(--minitine-color-accent) 92%, var(--minitine-color-text-muted));
+	}
+
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+
+.mantine-Button-root[data-variant="default"] {
+	background: transparent;
+	color: var(--minitine-color-text);
+	border: 1px solid var(--minitine-color-border);
+
+	.mantine-Button-section svg {
+		stroke: currentColor;
+		color: currentColor;
+	}
+
+	&:hover:not(:disabled) {
+		background: var(--minitine-color-card-hover);
+	}
+}
+
+.mantine-ActionIcon-root svg {
+	stroke: currentColor;
+	color: currentColor;
+}
+
+.mantine-NavLink-root[data-variant="minitine"] {
+	--nl-bg: var(--minitine-color-sidebar-active);
+	--nl-hover: var(--minitine-color-sidebar-active);
+	--nl-color: var(--minitine-color-text);
+
+	padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
+	border-radius: var(--minitine-radius-sm);
+	color: var(--minitine-color-text-muted);
+	font-weight: 500;
+	transition:
+		background var(--minitine-motion-fast),
+		color var(--minitine-motion-fast);
+
+	.mantine-NavLink-label {
+		font-weight: 500;
+	}
+
+	.mantine-NavLink-description {
+		color: var(--minitine-color-text-muted);
+	}
+
+	.mantine-NavLink-section[data-position="left"] {
+		margin-inline-end: var(--mantine-spacing-sm);
+	}
+
+	@media (hover: hover) {
+		&:hover:not([data-disabled]) {
+			background-color: var(--minitine-color-card-hover);
+			color: var(--minitine-color-text);
+		}
+	}
+
+	&:where([data-active], [aria-current="page"]) {
+		background-color: var(--minitine-color-sidebar-active);
+		color: var(--minitine-color-text);
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--minitine-color-sidebar-active);
+			}
+		}
+	}
+
+	&:where([data-disabled]) {
+		opacity: 0.45;
+	}
+}
+
+.mantine-Badge-root[data-variant="minitine"] {
+	background: var(--minitine-color-surface-raised);
+	color: var(--minitine-color-text-muted);
+	border: 1px solid var(--minitine-color-border);
+	font-weight: 500;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.mantine-Badge-root[data-variant="status"] {
+	height: auto;
+	padding: 0;
+	font-size: var(--mantine-font-size-xs);
+	font-weight: 500;
+	line-height: 1.2;
+	text-transform: none;
+	letter-spacing: 0;
+	background: transparent;
+	border: none;
+
+	.mantine-Badge-section[data-position="left"] {
+		margin-inline-end: var(--mantine-spacing-xs);
+	}
+}
+
+.mantine-Badge-root[data-variant="status-pill"] {
+	font-weight: 500;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.mantine-Paper-root[data-variant="minitine"],
+.mantine-Card-root[data-variant="minitine"] {
+	background: var(--minitine-color-card-background);
+	border: 1px solid var(--minitine-color-border);
+}
+
+.mantine-Paper-root[data-variant="interactive"],
+.mantine-Card-root[data-variant="interactive"] {
+	background: var(--minitine-color-card-background);
+	border: 1px solid var(--minitine-color-border);
+	cursor: pointer;
+	transition:
+		background var(--minitine-motion-fast),
+		border-color var(--minitine-motion-fast);
+
+	&:hover {
+		background: var(--minitine-color-card-hover);
+		border-color: var(--minitine-color-border-strong);
+	}
+}
+
+.mantine-InputWrapper-label {
+	color: var(--minitine-color-text);
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+
+.mantine-Input-input:not([data-variant="unstyled"]),
+.mantine-PinInput-input {
+	--input-bg: var(--minitine-color-input-background);
+	--input-bd: var(--minitine-color-border);
+	--input-bd-focus: var(--minitine-color-border-strong);
+	--input-color: var(--minitine-color-text);
+	--input-placeholder-color: var(--minitine-color-text-subtle);
+
+	transition: border-color var(--minitine-motion-fast);
+}
+
+.mantine-Tabs-root[data-variant="minitine"] {
+	.mantine-Tabs-list {
+		border-bottom: 1px solid var(--minitine-color-border);
+		gap: 4px;
+	}
+
+	.mantine-Tabs-tab {
+		color: var(--minitine-color-text-muted);
+		border-bottom: 2px solid transparent;
+		border-radius: 0;
+		font-weight: 500;
+		padding-inline: var(--mantine-spacing-md);
+
+		&[data-active="true"] {
+			color: var(--minitine-color-text);
+			border-bottom-color: var(--minitine-color-text);
+			background: transparent;
+		}
+
+		&:hover:not([data-active="true"]) {
+			background: var(--minitine-color-card-hover);
+		}
+	}
+}
+
+.mantine-Tabs-root[data-variant="minitine-pills"] {
+	.mantine-Tabs-list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		border-bottom: none;
+		gap: 4px;
+		padding: 0 var(--mantine-spacing-md) var(--mantine-spacing-sm);
+	}
+
+	.mantine-Tabs-tab {
+		color: var(--minitine-color-text-muted);
+		border: none;
+		border-radius: var(--minitine-radius-sm);
+		font-size: var(--mantine-font-size-xs);
+		font-weight: 500;
+		padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+		line-height: 1.2;
+		height: auto;
+		background: transparent;
+
+		&[data-active="true"] {
+			color: var(--minitine-color-text);
+			background: var(--minitine-color-card-hover);
+		}
+
+		&:hover:not([data-active="true"]) {
+			background: var(--minitine-color-card-hover);
+			color: var(--minitine-color-text);
+		}
+	}
+}
+
+.mantine-Menu-dropdown,
+.mantine-Popover-dropdown {
+	background: var(--minitine-color-card-background);
+	border-color: var(--minitine-color-border);
+}
+
+.mantine-Modal-content,
+.mantine-Drawer-content {
+	background: var(--minitine-color-card-background);
+	border: 1px solid var(--minitine-color-border);
+}
+
+.mantine-Modal-header,
+.mantine-Drawer-header {
+	background: var(--minitine-color-card-background);
+	border-bottom: 1px solid var(--minitine-color-border);
+	min-height: unset;
+	padding: var(--mantine-spacing-lg) var(--mantine-spacing-lg) var(--mantine-spacing-md);
+}
+
+.mantine-Modal-title,
+.mantine-Drawer-title {
+	font-size: var(--mantine-font-size-md);
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.mantine-Modal-body,
+.mantine-Drawer-body {
+	padding: var(--mantine-spacing-lg);
+}
+
+.mantine-Modal-close,
+.mantine-Drawer-close {
+	color: var(--minitine-color-text-muted);
+}
+
+.mantine-Table-table {
+	--table-border-color: var(--minitine-color-border);
+	--table-striped-color: var(--minitine-color-surface-raised);
+	--table-highlight-on-hover-color: var(--minitine-color-card-hover);
+}
+
+.mantine-Blockquote-root {
+	/* Mantine sets the --bq-* variables in the style attribute. Thus set properties here. */
+	background: var(--minitine-color-surface-raised);
+	border-inline-start-color: var(--minitine-color-border-strong);
+	color: var(--minitine-color-text);
+}
+
+.mantine-Notification-root {
+	--notification-color: var(--minitine-color-accent);
+
+	background: var(--minitine-color-card-background);
+	border: 1px solid var(--minitine-color-border);
+}
+
+/* These components show the primary color in the foreground. No text is on top of
+   it. Thus they use the accent color and not the filled shade. A color prop has
+   priority, because Mantine sets these variables in the style attribute. */
+.mantine-Loader-root {
+	--loader-color: var(--minitine-color-accent);
+}
+
+.mantine-Slider-root {
+	--slider-color: var(--minitine-color-accent);
+}
+
+.mantine-SemiCircleProgress-root {
+	--scp-filled-segment-color: var(--minitine-color-accent);
+}
+
+.mantine-Timeline-root {
+	--tl-color: var(--minitine-color-accent);
+}
+
+.mantine-Timeline-itemBullet:where([data-active]) {
+	/* Mantine puts --tl-icon-color in the style attribute. Thus set the property. */
+	color: var(--minitine-color-accent-foreground);
+}
+
+.mantine-Indicator-root {
+	--indicator-color: var(--minitine-color-accent);
+	--indicator-text-color: var(--minitine-color-accent-foreground);
+}
+
+.mantine-Radio-root {
+	--radio-color: var(--minitine-color-accent);
+	--radio-icon-color: var(--minitine-color-accent-foreground);
+}
+
+.mantine-Stepper-stepIcon {
+	border-color: var(--minitine-color-border-strong);
+	color: var(--minitine-color-text-muted);
+
+	&:where([data-progress], [data-completed]) {
+		background-color: var(--minitine-color-accent);
+		border-color: var(--minitine-color-accent);
+		color: var(--minitine-color-accent-foreground);
+	}
+}
+
+.mantine-Stepper-stepCompletedIcon {
+	/* Mantine puts the color and the size in the style attribute. Thus these two
+	   rules need a property and an !important flag. */
+	color: var(--minitine-color-accent-foreground);
+
+	svg {
+		width: 40% !important;
+		height: 40% !important;
+	}
+}
+
+.mantine-Checkbox-root[data-variant="minitine"] {
+	cursor: pointer;
+
+	.mantine-Checkbox-label {
+		cursor: pointer;
+	}
+
+	.mantine-Checkbox-input {
+		cursor: pointer;
+		border-color: var(--minitine-color-border-strong);
+		background: transparent;
+
+		&:checked,
+		&:indeterminate {
+			background-color: var(--minitine-color-text);
+			border-color: var(--minitine-color-text);
+		}
+	}
+
+	.mantine-Checkbox-icon {
+		color: var(--minitine-color-background);
+	}
+}
+
+.mantine-Switch-root[data-variant="minitine"] {
+	--switch-cursor: pointer;
+	--label-cursor: pointer;
+
+	cursor: pointer;
+
+	.mantine-Switch-label {
+		cursor: pointer;
+	}
+
+	.mantine-Switch-track {
+		cursor: pointer;
+		--switch-bg: var(--minitine-color-border-strong);
+	}
+
+	.mantine-Switch-thumb {
+		--switch-thumb-bg: var(--minitine-color-text);
+	}
+
+	.mantine-Switch-thumb[data-with-thumb-indicator]::before {
+		background-color: var(--minitine-color-border-strong);
+	}
+
+	.mantine-Switch-input:checked + .mantine-Switch-track {
+		--switch-color: var(--minitine-color-text);
+		--switch-bg: var(--minitine-color-text);
+	}
+
+	.mantine-Switch-input:checked + .mantine-Switch-track .mantine-Switch-thumb {
+		--switch-thumb-bg: var(--minitine-color-background);
+	}
+
+	.mantine-Switch-input:checked + .mantine-Switch-track .mantine-Switch-thumb[data-with-thumb-indicator]::before {
+		background-color: var(--minitine-color-text-muted);
+	}
+
+	.mantine-Switch-input:disabled + .mantine-Switch-track,
+	.mantine-Switch-input[data-disabled] + .mantine-Switch-track {
+		--switch-cursor: not-allowed;
+		cursor: not-allowed;
+	}
+}

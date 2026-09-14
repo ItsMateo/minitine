@@ -1,0 +1,18 @@
+.root {
+	display: flex;
+	align-items: center;
+	gap: var(--mantine-spacing-md);
+	padding: var(--mantine-spacing-sm) var(--mantine-spacing-lg);
+	border-bottom: 1px solid var(--minitine-color-border);
+	background: var(--minitine-color-background);
+}
+
+.leading,
+.trailing {
+	flex-shrink: 0;
+}
+
+.filters {
+	flex: 1;
+	min-width: 0;
+}

@@ -1,0 +1,7 @@
+/* Each story block in a docs page uses the background of the story, not the
+   background of the docs page. Then the two color schemes always agree. */
+.docs-story,
+.sbdocs-preview,
+.sb-story {
+	background: var(--minitine-color-background);
+}
